@@ -6,7 +6,7 @@ export default function TopBar() {
     <div className={"topbar"}>
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo"> Notes Dist </span>{" "}
+          <span className="logo"> Note Distribution App </span>{" "}
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
