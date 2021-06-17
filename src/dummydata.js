@@ -48,3 +48,54 @@ export const userdata = [
     "Active User": 8076,
   },
 ];
+export const courseRowData = [
+  {
+    id: 167,
+    avatar:
+      "https://s3.amazonaws.com/cdn-media-1.freecodecamp.org/ghost/2019/05/java.jpg",
+
+    courseName: "Btech Electronics",
+    st_no: 35,
+    status: "New",
+    action: "Edit",
+  },
+  {
+    id: 169,
+    avatar: null,
+
+    courseName: "Btech Electronics",
+    st_no: 35,
+    status: "New",
+    action: "Edit",
+  },
+  {
+    id: 8998,
+    avatar:
+      "https://s3.amazonaws.com/cdn-media-1.freecodecamp.org/ghost/2019/05/java.jpg",
+
+    courseName: "Btech Mechanical",
+    st_no: 35,
+    status: "New",
+    action: "Edit",
+  },
+  {
+    id: 45,
+    avatar:
+      "https://s3.amazonaws.com/cdn-media-1.freecodecamp.org/ghost/2019/05/java.jpg",
+
+    courseName: "MCA",
+    st_no: 35,
+    status: "New",
+    action: "Edit",
+  },
+  {
+    id: 67,
+    avatar:
+      "https://s3.amazonaws.com/cdn-media-1.freecodecamp.org/ghost/2019/05/java.jpg",
+
+    courseName: "BCA",
+    st_no: 35,
+    status: "New",
+    action: "Edit",
+  },
+];

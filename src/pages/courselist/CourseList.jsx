@@ -1,4 +1,4 @@
-import "./userlist.css";
+import "./courselist.css";
 import * as React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
@@ -15,7 +15,7 @@ import { Avatar, Button, Menu, MenuItem, Fade } from "@material-ui/core";
 import { useDemoData } from "@material-ui/x-grid-data-generator";
 import { MoreVert, Edit, Visibility, HighlightOff } from "@material-ui/icons";
 import { courseRowData } from "../../dummydata.js";
-export default function UserList() {
+export default function CourseList() {
   // Menu
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);

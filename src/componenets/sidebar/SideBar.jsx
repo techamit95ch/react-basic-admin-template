@@ -15,7 +15,9 @@ import {
   RecordVoiceOver,
   PermIdentity,
   MenuBook,
+  Class,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -25,18 +27,18 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
+            <Link to="/" className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
               Home
-            </li>
-            <li className="sidebarListItem">
+            </Link>
+            <Link className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
-            </li>
-            <li className="sidebarListItem">
+            </Link>
+            <Link className="sidebarListItem">
               <TrendingUp className="sidebarIcon" />
               Students Report
-            </li>
+            </Link>
           </ul>
         </div>
         {/* {" DashBoard Close"} */}
@@ -44,18 +46,23 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Course Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
-              <MenuBook className="sidebarIcon" />
-              Department{" "}
-            </li>
-            <li className="sidebarListItem ">
+            <Link to="/courses" className="sidebarListItem ">
               <School className="sidebarIcon" />
-              Courses{" "}
-            </li>
-            <li className="sidebarListItem ">
+              Courses
+            </Link>
+            <Link to="/subject" className="sidebarListItem ">
+              <MenuBook className="sidebarIcon" />
+              Subject
+            </Link>
+            <Link to="/classroom" className="sidebarListItem ">
+              <Class className="sidebarIcon" />
+              Class Room
+            </Link>
+
+            <Link to="/notes" className="sidebarListItem ">
               <Note className="sidebarIcon" />
-              Note{" "}
-            </li>
+              Notes
+            </Link>
           </ul>
         </div>
         {/* {" Course Menu Close"} */}
@@ -63,14 +70,10 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Proffesor Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
+            <Link to="/users/professor" className="sidebarListItem ">
               <RecordVoiceOver className="sidebarIcon" />
               All Proffesor{" "}
-            </li>
-            <li className="sidebarListItem ">
-              <PersonAdd className="sidebarIcon" />
-              Add
-            </li>
+            </Link>
           </ul>
         </div>
         {/* {" Proffesor Menu Close"} */}
@@ -78,14 +81,10 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Student Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
+            <Link to="/users/student" className="sidebarListItem ">
               <PermIdentity className="sidebarIcon" />
               All Student{" "}
-            </li>
-            <li className="sidebarListItem ">
-              <PersonAdd className="sidebarIcon" />
-              Add
-            </li>
+            </Link>
           </ul>
         </div>
         {/* {" Student Menu Close"} */}
@@ -93,22 +92,22 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem ">
+            <Link to="#" className="sidebarListItem ">
               <Event className="sidebarIcon" />
               Event details{" "}
-            </li>
-            <li className="sidebarListItem">
+            </Link>
+            <Link to="/mail" className="sidebarListItem">
               <MailOutline className="sidebarIcon" />
               Email
-            </li>
-            <li className="sidebarListItem">
+            </Link>
+            <Link to="#" className="sidebarListItem">
               <ThumbUpAlt className="sidebarIcon" />
               Success Story
-            </li>
-            <li className="sidebarListItem">
+            </Link>
+            <Link to="/feedback" className="sidebarListItem">
               <Feedback className="sidebarIcon" />
               Feed Back
-            </li>
+            </Link>
           </ul>
         </div>
         {/* {" Quick Menu Close"} */}

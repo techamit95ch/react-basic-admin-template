@@ -1,8 +1,9 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./widgetLg.css";
+import React from "react";
+
 import Table from "react-bootstrap/Table";
 export default function WidgetLg() {
-
   return (
     <div className="widgetLg">
       <h3 className="widgetLgTitle">Latest Course</h3>
@@ -25,7 +26,9 @@ export default function WidgetLg() {
               />
               Instructor name
             </td>
-            <td className="widgetLgNote"><button className="widgetLgButton">Note Name</button></td>
+            <td className="widgetLgNote">
+              <button className="widgetLgButton">Note Name</button>
+            </td>
             <td className="widgetLgSubject">Subject name & Id</td>
             <td className="widgetLgcourse">Course name</td>
           </tr>
@@ -38,7 +41,9 @@ export default function WidgetLg() {
               />
               Instructor name
             </td>
-            <td className="widgetLgNote"><button className="widgetLgButton">Note Name</button></td>
+            <td className="widgetLgNote">
+              <button className="widgetLgButton">Note Name</button>
+            </td>
             <td className="widgetLgSubject">Subject name & Id</td>
             <td className="widgetLgcourse">Course name</td>
           </tr>
@@ -51,7 +56,9 @@ export default function WidgetLg() {
               />
               Instructor name
             </td>
-            <td className="widgetLgNote"><button className="widgetLgButton">Note Name</button></td>
+            <td className="widgetLgNote">
+              <button className="widgetLgButton">Note Name</button>
+            </td>
             <td className="widgetLgSubject">Subject name & Id</td>
             <td className="widgetLgcourse">Course name</td>
           </tr>
