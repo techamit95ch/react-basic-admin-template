@@ -40,11 +40,11 @@ export default function UserList() {
   const classes = useStyles();
   // DataGrid
   const columns: GridColDef[] = [
-    { field: "id", headerName: "#", width: 100 },
+    { field: "uid", headerName: "User id", width: 150 },
 
     {
-      field: "courseName",
-      headerName: "Course",
+      field: "fullname",
+      headerName: "User",
       width: 350,
       renderCell: (param) => {
         return (
@@ -58,9 +58,9 @@ export default function UserList() {
     },
 
     {
-      field: "st_no",
-      headerName: "Total Students",
-      type: "number",
+      field: "email",
+      headerName: "Email",
+
       width: 200,
     },
     { field: "status", headerName: "Status", width: 150 },
@@ -83,22 +83,18 @@ export default function UserList() {
   ];
 
   const rows: GridRowsProp = courseRowData;
-  // const { data } = useDemoData({
-  //   dataSet: "Commodity",
-  //   rowLength: 10,
-  //   maxColumns: 6,
-  // });
+
 
   return (
     <div style={{ width: "100%" }} className="course">
       <div className="courseTitleContainer">
-        <h3 className="courseTitle">{"Course Lists"}</h3>
+        <h3 className="courseTitle">{"User Lists"}</h3>
 
         <Button
           className="courseAddButton"
           variant="outlined"
           color="primary"
-        ><Link to="/course/">
+        ><Link to="/user">
           Create</Link>
         </Button>
       </div>
