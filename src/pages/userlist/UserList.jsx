@@ -61,13 +61,12 @@ export default function UserList() {
       field: "email",
       headerName: "Email",
 
-      width: 200,
+      width: 350,
     },
-    { field: "status", headerName: "Status", width: 150 },
     {
       field: "action",
       headerName: "Action",
-      width: 200,
+      width: 185,
       renderCell: (param) => {
         return (
           <>
