@@ -91,8 +91,6 @@ export default function Course(props) {
     <div className=" course">
       <div className={classes2.root}>
         <div className="courseTitleContainer">
-          <h1 className="courseTitle">{"Course Name"}</h1>
-
           {/* <Button
             className="courseAddButton"
             variant="contained"
@@ -103,6 +101,7 @@ export default function Course(props) {
         </div>
         <div className="courseContainer">
           <div className="courseShow">
+            <span className="courseUpdateTitle">{"Course Name"}</span>
             <Card className={classes.root}>
               <CardHeader
                 avatar={
@@ -234,6 +233,7 @@ export default function Course(props) {
                   className={classes.textField}
                   variant="contained"
                   color="primary"
+                  type="submit"
                 >
                   Create
                 </Fab>
@@ -241,6 +241,7 @@ export default function Course(props) {
                   className={classes.textField}
                   variant="contained"
                   color="secondary"
+                  type="submit"
                 >
                   Update
                 </Fab>
