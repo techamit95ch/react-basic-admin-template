@@ -9,6 +9,7 @@ import Course from "./pages/course/Course";
 import Subject from "./pages/subject/Subject";
 import ClassRoom from "./pages/classroom/ClassRoom";
 import NotesView from "./pages/notes/notesView/NoteView";
+import NotesCreate from "./pages/notes/notesCreate/NotesCreate";
 import "./app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route exact path="/notes">
             <NotesView />
+          </Route>
+          <Route exact path="/note">
+            <NotesCreate />
           </Route>
         </Switch>
       </div>
