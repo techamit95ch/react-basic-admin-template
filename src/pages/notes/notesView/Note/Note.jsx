@@ -2,7 +2,7 @@ import "./note.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { VDialogImg, VDialogPDF } from "./vdialog/VDialog";
+import { VDialogImg, VDialogPDF, VDialogText } from "./vdialog/VDialog";
 import {
   CardMedia,
   Card,
@@ -27,6 +27,7 @@ import { GetAppRounded, Close } from "@material-ui/icons";
 import { Col, Row, Container } from "react-bootstrap";
 import PictureAsPdfRoundedIcon from "@material-ui/icons/PictureAsPdfRounded";
 import PanoramaRoundedIcon from "@material-ui/icons/PanoramaRounded";
+import TextFieldsRoundedIcon from "@material-ui/icons/TextFieldsRounded";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "relative",
@@ -40,13 +41,16 @@ const useStyles = makeStyles((theme) => ({
 export default function Note() {
   const [imageopen, setImagepen] = useState(false);
   const [pdfopen, setPDFOpen] = useState(false);
+  const [textOpen, setTextOpen] = useState(false);
   const handleClickOpen = (prop) => {
     if (prop == "image") setImagepen(true);
     if (prop == "pdf") setPDFOpen(true);
+    if (prop == "text") setTextOpen(true);
   };
   const handleClose = () => {
     setImagepen(false);
     setPDFOpen(false);
+    setTextOpen(false);
   };
   const classes = useStyles();
   const img =
@@ -87,8 +91,13 @@ export default function Note() {
                 onClick={() => handleClickOpen("image")}
                 color="primary"
               />
+
               <PictureAsPdfRoundedIcon
                 onClick={() => handleClickOpen("pdf")}
+                color="primary"
+              />
+              <TextFieldsRoundedIcon
+                onClick={() => handleClickOpen("text")}
                 color="primary"
               />
               <GetAppRounded color="primary" />
@@ -103,6 +112,12 @@ export default function Note() {
                   <Close onClick={handleClose} color="inherit" />
                 </DialogTitle>
                 <VDialogPDF path={pdf} />
+              </Dialog>
+              <Dialog fullScreen open={textOpen} onClose={handleClose}>
+                <DialogTitle className={classes.appBar}>
+                  <Close onClick={handleClose} color="inherit" />
+                </DialogTitle>
+                <VDialogText data="" />
               </Dialog>
             </CardActions>
           </Card>
