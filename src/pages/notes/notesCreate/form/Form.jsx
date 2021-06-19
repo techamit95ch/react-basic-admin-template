@@ -142,7 +142,7 @@ export const MediaView = (props) => {
       <Row>
         <Col>
           <Form>
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Link address</Form.Label>
           <Form.Control type="link" placeholder=" video Link" />
               <Form.Text className="text-muted">
                 Provide exact video url from iframe src of the video

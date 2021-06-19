@@ -61,7 +61,6 @@ export default function NoteTable(props) {
         return (
           <>
             <Visibility color="primary" />
-
             <HighlightOff color="secondary" title="Disband" />
           </>
         );
@@ -74,7 +73,7 @@ export default function NoteTable(props) {
   return (
     <Container style={{ width: "100%" }} className="notetable">
       <Row className="courseTitleContainer">
-        <h3 className="courseTitle">{"Course Lists"}</h3>
+        <h3 className="courseTitle">{"Note Lists"}</h3>
       </Row>
       <DataGrid
         rows={rows}

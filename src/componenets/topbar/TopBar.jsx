@@ -125,8 +125,8 @@ export default function TopBar() {
               TransitionComponent={Fade}
             >
               <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <Link to="/jx41XYm2">   <MenuItem onClick={handleClose}>My account</MenuItem></Link>
+            <Link to="/signin">  <MenuItem onClick={handleClose}>Logout</MenuItem></Link>
             </Menu>
           </div>
         </div>

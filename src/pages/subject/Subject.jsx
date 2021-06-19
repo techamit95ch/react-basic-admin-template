@@ -32,6 +32,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import InputIcon from '@material-ui/icons/Input';
+
 export default function Subject() {
   // Menu
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -97,6 +99,7 @@ export default function Subject() {
 
             <Edit color="disabled" />
             <HighlightOff color="secondary" title="Disband" />
+            <Link to={"/notes/"}> <InputIcon color="#1D2229"/></Link>
           </>
         );
       },

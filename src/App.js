@@ -13,6 +13,8 @@ import NotesCreate from "./pages/notes/notesCreate/NotesCreate";
 import "./app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import SignIn from "./pages/signin/SignIn";
+import Login from "./pages/login/Login";
 import $ from "jquery";
 import bootstrap from "bootstrap";
 import ReactDOM, {
@@ -25,42 +27,86 @@ import ReactDOM, {
 function App() {
   return (
     <Router className="App">
-      <TopBar />
-      <div className="container1">
-        <SideBar />
-        <Switch>
-          <Route exact path="/">
+      <Switch>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/signin">
+          <SignIn />
+        </Route>
+        <Route exact path="/">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <Home />
-          </Route>
-          <Route exact path="/users/:role">
+          </div>
+        </Route>
+        <Route exact path="/users/:role">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <UserList />
-          </Route>
-          <Route exact path="/user/:uid">
+          </div>
+        </Route>
+        <Route exact path="/user/:uid">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <User />
-          </Route>
-          <Route exact path="/courses">
+          </div>
+        </Route>
+        <Route exact path="/courses">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <CourseList />
-          </Route>
-          <Route exact path="/course/:courseId">
+          </div>
+        </Route>
+        <Route exact path="/course/:courseId">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <Course />
-          </Route>
-          <Route exact path="/course">
+          </div>
+        </Route>
+        <Route exact path="/course">
+          <Course />
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <Course />
-          </Route>
-          <Route exact path="/subject">
+          </div>
+        </Route>
+        <Route exact path="/subject">
+          <Subject />
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <Subject />
-          </Route>
-          <Route exact path="/classroom">
+          </div>
+        </Route>
+        <Route exact path="/classroom">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <ClassRoom />
-          </Route>
-          <Route exact path="/notes">
+          </div>
+        </Route>
+        <Route exact path="/notes">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <NotesView />
-          </Route>
-          <Route exact path="/note">
+          </div>
+        </Route>
+        <Route exact path="/note">
+          <TopBar />
+          <div className="container1">
+            <SideBar />
             <NotesCreate />
-          </Route>
-        </Switch>
-      </div>
+          </div>
+        </Route>
+      </Switch>
     </Router>
   );
 }

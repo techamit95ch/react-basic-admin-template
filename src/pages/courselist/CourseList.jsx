@@ -15,6 +15,7 @@ import { Avatar, Button, Menu, MenuItem, Fade } from "@material-ui/core";
 import { useDemoData } from "@material-ui/x-grid-data-generator";
 import { MoreVert, Edit, Visibility, HighlightOff } from "@material-ui/icons";
 import { courseRowData } from "../../dummydata.js";
+import InputIcon from '@material-ui/icons/Input';
 export default function CourseList() {
   // Menu
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -76,6 +77,7 @@ export default function CourseList() {
               <Edit color="disabled" />
             </Link>
             <HighlightOff color="secondary" title="Disband" />
+            <Link to={"/subject/"}> <InputIcon color="#1D2229"/></Link>
           </>
         );
       },
