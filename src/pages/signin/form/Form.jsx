@@ -30,6 +30,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import { UserAgent } from "react-useragent";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -64,6 +65,16 @@ export function SignInForm() {
   const [fullWidth, setFullWidth] = React.useState(true);
 
   const handleClickOpen = () => {
+    var txt = "";
+    txt +=  navigator.appCodeName ;
+    txt +=  navigator.appName;
+    txt +=  navigator.appVersion;
+    txt +=  navigator.cookieEnabled ;
+    txt +=  navigator.language ;
+    txt +=  navigator.onLine ;
+    txt += navigator.platform;
+    txt +=  navigator.userAgent;
+    console.log(txt);
     setOpen(true);
   };
 
